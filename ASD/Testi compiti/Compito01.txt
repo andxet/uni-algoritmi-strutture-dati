@@ -1,0 +1,18 @@
+Si definisca una classe Bandiera non istanziabile, all'interno della quale si definiscano:
+1) un metodo statico
+boolean dividiColoriPostCond(int[] a)
+che stabilisca se l'array a ha i colori divisi correttamente, cioè che stabilisca se la postcondizione 
+dell'algoritmo dividiColori è stata raggiunta;
+
+2) un metodo statico
+void dividiColori(int[] a) che realizzi l'algoritmo della bandiera tricolore, visto a lezione.
+
+Si scriva inoltre un main che testi tale algoritmo su array di interi casuali,
+usando il metodo 1).
+
+Si scriva poi (e si testi) una versione alternativa di dividiColori in cui la parte da esaminare si
+trovi fra il verde e il bianco invece che fra il bianco e il rosso come nella soluzione illustrata a lezione.
+
+Per tale versione alternativa si "disegni l'invariante", ossia si disegni la situazione al passo generico 
+in modo che sia chiaro il significato degli indici, come sulle slides. Il disegno può essere fatto (come commento) 
+nello stesso file .java, si veda il file di esempio.

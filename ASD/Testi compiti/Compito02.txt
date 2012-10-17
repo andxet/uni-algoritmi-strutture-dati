@@ -1,0 +1,5 @@
+Si scarichi il file BinTree.java qui sopra, lo si metta in una cartella compito2,
+e si completino le definizioni dei metodi.
+
+Si crei una cartella parallela testcompito2
+e in essa un file TestBinTree.java che provi i metodi della classe BinTree.

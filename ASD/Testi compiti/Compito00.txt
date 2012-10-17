@@ -1,0 +1,67 @@
+
+    All'interno di una cartella/package avente
+    per nome il tuo cognome (minuscolo, in una parola sola
+    senza spazi), all'interno di una sotto-cartella/sotto-package
+    di nome compito0, definisci nel package cognome.compito0:
+    
+    A) in un file RicercaBinaria.java una classe RicercaBinaria non istanziabile, 
+    contenente solo metodi statici.
+    In essa definisci:
+  
+    1) un metodo statico ricercaBinaria che realizzi in modo
+    iterativo (ciclo while) l'algoritmo-base di ricerca binaria
+    in un array ordinato di interi, in modo che restituisca
+    l'indice dell'elemento nell'array o, se l'elemento
+    non compare nell'array, -1;
+  
+    1 bis) un metodo statico ricercaBinariaBool come il precedente che restituisca true
+    se l'elemento cercato compare nell'array, false altrimenti;
+  
+    2) due metodi statici ricercaBinariaRic e ricBin
+    che insieme realizzino, come indicato qui sotto,
+    la versione ricorsiva del metodo 1:
+    
+      public static int ricercaBinariaRic(int x, int[] a) {
+        return ricBin(x, a, 0, a.length - 1);
+      }
+    
+      private static int ricBin(int x, int[] a, int inf, int sup) {
+        //... ricerca binaria ricorsiva
+  }
+    
+    3) un main che provi i metodi suddetti.
+    
+    
+    B) In un file ArrayParzialeOrdinato.java una classe ArrayParzialeOrdinato,
+       contenente:
+       
+    1) un campo privato elementi di tipo String[];
+    
+    2) un campo privato int numElementi;
+    
+    3) un metodo privato int ricercaBinaria che realizzi
+       la procedura di ricerca binaria iterativa con i vari raffinamenti
+       e con restituzione della posizione di inserimento
+       (vedi slides lezioni);  
+    
+    4) un metodo pubblico int inserisci(String s)
+       che inserisca s in elementi mantenendolo ordinato
+       e usando ricercaBinaria (se gia' presente lo inserisce
+       un'altra volta); il metodo restituisce l'indice
+       a cui e' stato inserito;
+       se l'array elementi e' pieno, lancia un'eccezione
+       IllegalStateException("Array pieno");
+       
+    5) un metodo pubblico String get(int i) che restituisce
+       l'i-esimo elemento, oppure null se l'i-esimo elemento non esiste;
+    
+    6) un metodo pubblico void print() che scrive sullo schermo gli elementi
+       dell'array in ordine.
+       
+    C) In una cartella/package tests una classe TestArrayParzialeOrdinato,
+       che faccia l'import della classe ArrayParzialeOrdinato
+       e contenga un main che provi la classe suddetta.
+       
+       
+  
+ 
