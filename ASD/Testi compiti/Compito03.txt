@@ -1,0 +1,8 @@
+Scarica la cartella zippata qui sotto contenente due files, con i quali costruisci il package cognome.binarytrees.
+Scrivi e/o completa i metodi richiesti,
+definendo, quando è il caso, i necessari metodi ausiliari.
+
+Definisci un package cognome.testbinarytrees contenente una classe TestBinaryTree che permetta di testare i metodi di BinaryTree non controllati dall'interfaccia grafica fornita.
+
+Consegna una cartella zippata cognome
+contenente 2 cartelle: binarytrees e testbinarytrees.
