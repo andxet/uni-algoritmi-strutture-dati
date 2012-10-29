@@ -1,4 +1,4 @@
-package peretti.compito02;
+package peretti.bintree;
 
 //import lists.*;
 import java.io.*;

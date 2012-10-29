@@ -3,7 +3,7 @@ package peretti.testcompito2;
 import java.io.File;
 import java.util.Random;
 
-import peretti.compito02.BinTree;
+import peretti.bintree.BinTree;
 
 public class TestBinTree {
 	
@@ -20,7 +20,6 @@ public class TestBinTree {
 		t = BinTree.add(6, t, "RLLRR");
 		t = BinTree.add(7, t, "RLLRLL");
 		t = BinTree.add(8, t, "RLLR");
-		
 
 		t = BinTree.add(55, t, "L");
 		t = BinTree.add(66, t, "LL");
