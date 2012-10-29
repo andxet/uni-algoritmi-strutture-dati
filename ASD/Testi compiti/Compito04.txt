@@ -1,0 +1,31 @@
+Si leggano le slides "Compilazione separata in C" qui sopra, riguardanti la strutturazione di un programma C in files
+diversi.
+Si scarichi la cartella Compito-4 qui sotto, e la si espanda nella cartella degli esercizi.
+Si realizzino gli algoritmi di ordinamento nel file sorting.c;
+il file sorting.h non deve (per ora) essere modificato.
+Si modifichi il file sortingTest.c in modo da realizzare un testing dei vari algoritmi su array di lunghezze via via
+crescenti raccogliendo le misure dei tempi in un file di testo.
+Si confrontino, per ciascuna lunghezza, il tempo di esecuzione su array casuale con quello su array quasi ordinato.
+Si realizzi in Java una classe Sorting contenente i seguenti metodi statici, implementanti i tre algoritmi selection-sort,
+insertion-sort, merge-sort (basta un copia e incolla dal C con minime modifiche):
+public static void ssort(int[] a)
+public static void isort(int[] a)
+public static void msort(int[] a)
+Si realizzi in Java una classe TestSorting che testi gli algoritmi di sorting usando la classe RandomArrays.java
+fornita in "Programmi utili".
+Si esaminino e si confrontino fra di loro, e con le previsioni teoriche, i risultati ottenuti in C; si esaminino
+poi i risultati ottenuti in Java, confrontandoli con quelli in C. 
+In particolare, in base ai tempi misurati per array di medie dimensioni si ricavi il tempo di esecuzione del selection
+sort o dell'insertion sort per un array abbastanza grande da richiedere molti minuti (ad esempio dell'ordine dei 10 o 20
+minuti), poi si verifichi (in laboratorio o a casa, ovviamente sulla macchina per cui si è ricavato quel tempo) se la
+previsione teorica è confermata (andando nel frattempo a fare una passeggiata).
+Si scriva una breve relazione corredata di tabelle.
+CONSEGNA: si consegni una cartella zippata "cognome" contenente tutti i files C, java e pdf
+Nota Bene: la forma della relazione e delle tabelle è libera; il formato deve essere standard (possibilmente pdf). Si
+scrivano frasi concise e chiare, con una composizione tipografica ordinata ma senza perdere troppo tempo nell'estetica o
+in effetti grafici. Conta la sostanza ! 
+
+Nota. Per misurare i tempi di esecuzione chi lo desidera può usare, in alternativa, uno strumento chiamato "profiler". Ciò
+tuttavia non è richiesto nel corso.
+Inizio consegne:	lunedì, 24 ottobre 2011, 01:35
+Termine consegne:	lunedì, 14 novembre 2011, 23:55

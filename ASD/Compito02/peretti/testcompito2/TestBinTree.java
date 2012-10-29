@@ -29,7 +29,7 @@ public class TestBinTree {
 		//t = treeRandom(25);
 		BinTree.draw(BinTree.find(6, nullTree), "Albero nullo");
 		
-		//BinTree t2 = BinTree.buildFromFile("Compito02/peretti/compito02/tree.txt");
+		//BinTree t2 = BinTree.buildFromFile("Compito02/peretti/bintree/tree.txt");
 		BinTree t2 = BinTree.find(4, t);
 		
 		BinTree.draw(t, " t ");
