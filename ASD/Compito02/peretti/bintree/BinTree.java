@@ -222,12 +222,6 @@ public class BinTree {
     return t.left == null && t.right == null;
   }
 
-  /** PRE-condizione: t non e' nullo;
-    da' come risultato true se t e' una foglia, false altrimenti */
-  public static boolean foglia(BinTree t) {
-    return t.left == null && t.right == null;
-  }
-
 public static void preord(BinTree t) {
 	if(t==null)
 		return;

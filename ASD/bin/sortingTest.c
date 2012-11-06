@@ -20,6 +20,12 @@ int ar[N];
     for(i = 0; i < n; i++) a[i] = rand()%max;
   }
 
+  void scambia(int ar[], int i, int j){
+	  int temp = ar[i];
+	  ar[i] = ar[j];
+	  ar[j] = temp;
+  }
+
  /* restituisce TRUE (cioè un numero != 0) se l'array è ordinato,
     restituisce FALSE (cioè 0) se l'array non è ordinato */
   int sorted(int a[], int n) {

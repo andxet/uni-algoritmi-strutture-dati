@@ -39,6 +39,6 @@
 
 /** MERGESORT */
 
-  void mergesort(int a[], int n) {
+  void mergesortMy(int a[], int n) {
     // ...
   }

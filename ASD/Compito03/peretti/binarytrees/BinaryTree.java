@@ -1,5 +1,7 @@
 package peretti.binarytrees;
 
+import javax.lang.model.element.Element;
+
 import peretti.bintree.BinTree;
 
 /*
@@ -113,7 +115,7 @@ public void display() {
 	  printPostOrder(root); 
   }
 
-  public void printPostOrder(Node t){
+ private void printPostOrder(Node t){
 	  if(t==null)
 		  return;
 	  
@@ -231,10 +233,16 @@ public BinaryTree trimmed(int h) {
 }
 
   private boolean uguali(Node n1, Node n2) {
-    return n1 == n2 && uguali(n1.left, n2.left) && uguali(n1, n2);
+	  if(n1 == n2 && n1 == null)
+		  return true;
+	  if(n1 == null || n2 == null)// && n1 != n2 (sottinteso)
+		  return false;
+    return n1.element == n2.element && uguali(n1.left, n2.left) && uguali(n1.right, n2.right);
   }
 
   public boolean ugualeA(BinaryTree t) {
+	  if(t == null)
+		  return false;
     return uguali(root, t.root);
   }
 
@@ -257,12 +265,33 @@ public BinaryTree trimmed(int h) {
 
 
   public boolean isComplete() {
-    return isComplete(root) > -2;// TODO: CERCARE SOLUZIONE
+    return isComplete(root) > -2;
   }
-
-  private int isComplete(Node nd) {
-    // ... TODO: isComplete
-    return 1000;
+  
+	private int isComplete(Node nd) { // Dovrebbe andare
+		if (nd.left == null && nd.right == null)
+			return 0;
+		else if (nd.left != null && nd.right != null) {
+			int temp1 = isComplete(nd.left);
+			int temp2 = isComplete(nd.right);
+			if (temp1 == temp2 && temp1 > -2)
+				return -1;
+			else
+				return -2;
+		} else
+			return -2;
+	}
+  
+  public int numNodiLiv(int liv) {
+	    return nodiLiv(liv, root);
+	  }
+  
+  private int nodiLiv(int x, Node t){
+	  if(t == null)
+		  return 0;
+	  if(x == 0)
+		  return 1;
+	  return nodiLiv(x-1, t.left) + nodiLiv(x-1, t.right);
   }
 
 /** classe di oggetti coppia booleano-nodo,
@@ -291,13 +320,27 @@ public BinaryTree trimmed(int h) {
  */
   public boolean removeSubtree(int x) {
     BoolNode ris = removeSubtree(x, root);
-    // root = ...; TODO: facoltativo: removeSubtree
+    root = ris.nodo;
     return ris.fatto;
   }
 
   private BoolNode removeSubtree(int x, Node nd) {
-    // ... //TODO: removeSubtree
-    return null;
+    if(nd == null)
+    	return new BoolNode(false, null);;
+    if(x == nd.element)
+    	return new BoolNode(true, null);
+    
+    BoolNode b1 = removeSubtree(x, nd.left);
+    nd.left = b1.nodo;
+    if(b1.fatto){
+    	b1.nodo = nd;
+    	return b1;
+    }
+    	
+    BoolNode b2 = removeSubtree(x, nd.right);
+    nd.right = b2.nodo;
+    b2.nodo = nd;
+    return b2;
   }
 
 /** Un nodo U si dice nodo-cardine di un albero
@@ -311,14 +354,25 @@ public BinaryTree trimmed(int h) {
     i (valori dei) nodi-cardine dell'albero
  */
   public void scriviCardini() {
-    System.out.print("nodi-cardine: ");
-    // ... TODO: scriviCardini
+    System.out.println("nodi-cardine: ");
+    cardini(root, 0);
     System.out.println();
   }
 
-  private int cardini(Node nd, int h) {
-    // ... TODO: cardini
-    return 1000;
+  private int cardini(Node t, int x) {
+	  if(t == null)
+          return -1;
+      int hl = cardini(t.left, x + 1);
+      int hd = cardini(t.right, x + 1);    
+      int high;
+      if(hl >= hd)
+          high = hl + 1;
+      else
+          high = hd + 1;
+      if(x == high)
+          System.out.println(t.element + "\t");
+         
+      return high;
   }
 
 }

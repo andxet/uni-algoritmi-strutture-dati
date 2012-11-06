@@ -376,6 +376,14 @@ public BinaryTreeGUI(String title) {
       repaint();
     }
   };
+  
+  private ActionListener numNodiLivListener = new ActionListener() {
+	    public void actionPerformed(ActionEvent e) {
+	    	for(int i = 0; i < 10; i ++){
+	    		s("Nodi per il livello " + i + " " + tree.numNodiLiv(i));
+	    	}
+	    }
+	  };
 
   private void addMenuItems() {
     menu.add(creaItem("Preorder", preorderListener));
@@ -391,6 +399,7 @@ public BinaryTreeGUI(String title) {
     menu.add(creaItem("Rifletti", reflectListener));
     menu.add(creaItem("Crea speculare", specularListener));
     menu.add(creaItem("Increment", incListener));
+    menu.add(creaItem("Num nodi 10 liv", numNodiLivListener));
   }
 
   private void redirectSystemStreams(){//final BinaryTreeGUI gui) {
