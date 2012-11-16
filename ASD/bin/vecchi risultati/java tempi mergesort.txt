@@ -1,0 +1,63 @@
+mergesort
+
+
+size = 5000: tempo = ms 9.864013671875; 
+su quasi ord.: tempo = ms 2.221923828125;
+
+size = 10000: tempo = ms 3.72021484375; 
+su quasi ord.: tempo = ms 0.608154296875;
+
+size = 15000: tempo = ms 2.473876953125; 
+su quasi ord.: tempo = ms 0.93701171875;
+
+size = 20000: tempo = ms 3.481201171875; 
+su quasi ord.: tempo = ms 1.341064453125;
+
+size = 25000: tempo = ms 4.34423828125; 
+su quasi ord.: tempo = ms 1.694091796875;
+
+size = 30000: tempo = ms 5.53515625; 
+su quasi ord.: tempo = ms 2.114990234375;
+
+size = 35000: tempo = ms 6.4208984375; 
+su quasi ord.: tempo = ms 2.556884765625;
+
+size = 40000: tempo = ms 7.365234375; 
+su quasi ord.: tempo = ms 2.77587890625;
+
+size = 45000: tempo = ms 8.435791015625; 
+su quasi ord.: tempo = ms 3.10400390625;
+
+size = 50000: tempo = ms 9.28125; 
+su quasi ord.: tempo = ms 3.56982421875;
+
+size = 55000: tempo = ms 10.4931640625; 
+su quasi ord.: tempo = ms 4.07177734375;
+
+size = 60000: tempo = ms 11.368896484375; 
+su quasi ord.: tempo = ms 4.1640625;
+
+size = 65000: tempo = ms 12.109130859375; 
+su quasi ord.: tempo = ms 4.14208984375;
+
+size = 70000: tempo = ms 13.844970703125; 
+su quasi ord.: tempo = ms 5.171142578125;
+
+size = 75000: tempo = ms 14.58984375; 
+su quasi ord.: tempo = ms 5.214111328125;
+
+size = 80000: tempo = ms 15.573974609375; 
+su quasi ord.: tempo = ms 5.725830078125;
+
+size = 85000: tempo = ms 16.3310546875; 
+su quasi ord.: tempo = ms 5.833984375;
+
+size = 90000: tempo = ms 17.7412109375; 
+su quasi ord.: tempo = ms 6.300048828125;
+
+size = 95000: tempo = ms 21.053955078125; 
+su quasi ord.: tempo = ms 6.968017578125;
+
+size = 100000: tempo = ms 19.591796875; 
+su quasi ord.: tempo = ms 7.321044921875;
+

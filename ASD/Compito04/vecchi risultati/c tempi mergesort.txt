@@ -1,0 +1,22 @@
+mergesort 
+
+size =   5000: tempo = ms      1.22; su quasi ord.: tempo = ms  0.63
+size =  10000: tempo = ms      2.58; su quasi ord.: tempo = ms  1.32
+size =  15000: tempo = ms      4.78; su quasi ord.: tempo = ms  2.88
+size =  20000: tempo = ms      7.21; su quasi ord.: tempo = ms  2.76
+size =  25000: tempo = ms      6.88; su quasi ord.: tempo = ms  5.65
+size =  30000: tempo = ms     20.89; su quasi ord.: tempo = ms 10.69
+size =  35000: tempo = ms     26.97; su quasi ord.: tempo = ms  6.32
+size =  40000: tempo = ms     15.27; su quasi ord.: tempo = ms  9.02
+size =  45000: tempo = ms     32.08; su quasi ord.: tempo = ms  7.06
+size =  50000: tempo = ms     18.11; su quasi ord.: tempo = ms 23.19
+size =  55000: tempo = ms     22.70; su quasi ord.: tempo = ms  9.25
+size =  60000: tempo = ms     27.47; su quasi ord.: tempo = ms 14.56
+size =  65000: tempo = ms     22.78; su quasi ord.: tempo = ms 24.78
+size =  70000: tempo = ms     29.54; su quasi ord.: tempo = ms 13.92
+size =  75000: tempo = ms     37.66; su quasi ord.: tempo = ms 20.17
+size =  80000: tempo = ms     55.37; su quasi ord.: tempo = ms 19.95
+size =  85000: tempo = ms     43.51; su quasi ord.: tempo = ms 17.32
+size =  90000: tempo = ms    162.81; su quasi ord.: tempo = ms 25.56
+size =  95000: tempo = ms     71.95; su quasi ord.: tempo = ms 29.60
+size = 100000: tempo = ms    123.83; su quasi ord.: tempo = ms 26.10

@@ -1,0 +1,23 @@
+SSORT MAX
+
+
+size = 5000: tempo = ms 48.537109375; su quasi ord.: tempo = ms 40.963134765625;
+size = 10000: tempo = ms 134.204833984375; su quasi ord.: tempo = ms 133.2490234375;
+size = 15000: tempo = ms 298.64892578125; su quasi ord.: tempo = ms 310.84912109375;
+size = 20000: tempo = ms 567.705810546875; su quasi ord.: tempo = ms 541.0390625;
+size = 25000: tempo = ms 841.12158203125; su quasi ord.: tempo = ms 831.164306640625;
+size = 30000: tempo = ms 1216.2431640625; su quasi ord.: tempo = ms 1220.957275390625;
+size = 35000: tempo = ms 1721.35498046875; su quasi ord.: tempo = ms 1785.734130859375;
+size = 40000: tempo = ms 2217.7421875; su quasi ord.: tempo = ms 2243.614990234375;
+size = 45000: tempo = ms 2857.724853515625; su quasi ord.: tempo = ms 2934.684814453125;
+size = 50000: tempo = ms 3366.803955078125; su quasi ord.: tempo = ms 3464.150634765625;
+size = 55000: tempo = ms 4193.14306640625; su quasi ord.: tempo = ms 4204.30224609375;
+size = 60000: tempo = ms 4831.01708984375; su quasi ord.: tempo = ms 4854.972900390625;
+size = 65000: tempo = ms 5738.492919921875; su quasi ord.: tempo = ms 5714.947021484375;
+size = 70000: tempo = ms 6574.966064453125; su quasi ord.: tempo = ms 6868.301025390625;
+size = 75000: tempo = ms 7658.403076171875; su quasi ord.: tempo = ms 7692.537109375;
+size = 80000: tempo = ms 8849.558837890625; su quasi ord.: tempo = ms 8538.10595703125;
+size = 85000: tempo = ms 10186.89697265625; su quasi ord.: tempo = ms 9660.23095703125;
+size = 90000: tempo = ms 11178.30908203125; su quasi ord.: tempo = ms 11151.88916015625;
+size = 95000: tempo = ms 12346.489013671875; su quasi ord.: tempo = ms 12448.166015625;
+size = 100000: tempo = ms 13589.39794921875; su quasi ord.: tempo = ms 13680.1201171875;

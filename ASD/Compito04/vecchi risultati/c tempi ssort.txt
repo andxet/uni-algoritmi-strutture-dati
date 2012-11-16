@@ -1,0 +1,22 @@
+SSORT
+
+size =   5000: tempo = ms     69.47; su quasi ord.: tempo = ms 60.55
+size =  10000: tempo = ms    276.66; su quasi ord.: tempo = ms 236.96
+size =  15000: tempo = ms    541.56; su quasi ord.: tempo = ms 529.45
+size =  20000: tempo = ms    957.22; su quasi ord.: tempo = ms 974.39
+size =  25000: tempo = ms   1509.43; su quasi ord.: tempo = ms 1480.62
+size =  30000: tempo = ms   2878.09; su quasi ord.: tempo = ms 2157.44
+size =  35000: tempo = ms   2924.70; su quasi ord.: tempo = ms 2910.95
+size =  40000: tempo = ms   3828.86; su quasi ord.: tempo = ms 3818.63
+size =  45000: tempo = ms   4957.64; su quasi ord.: tempo = ms 5086.19
+size =  50000: tempo = ms   6607.55; su quasi ord.: tempo = ms 6274.87
+size =  55000: tempo = ms   7788.14; su quasi ord.: tempo = ms 7531.94
+size =  60000: tempo = ms   9574.79; su quasi ord.: tempo = ms 8797.31
+size =  65000: tempo = ms  10261.28; su quasi ord.: tempo = ms 10262.41
+size =  70000: tempo = ms  12183.09; su quasi ord.: tempo = ms 11890.33
+size =  75000: tempo = ms  13796.21; su quasi ord.: tempo = ms 14241.41
+size =  80000: tempo = ms  19398.68; su quasi ord.: tempo = ms 15823.14
+size =  85000: tempo = ms  18440.58; su quasi ord.: tempo = ms 17321.21
+size =  90000: tempo = ms  21374.51; su quasi ord.: tempo = ms 21007.85
+size =  95000: tempo = ms  25088.96; su quasi ord.: tempo = ms 22853.12
+size = 100000: tempo = ms  27964.10; su quasi ord.: tempo = ms 28004.80

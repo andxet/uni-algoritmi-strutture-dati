@@ -268,7 +268,7 @@ public BinaryTree trimmed(int h) {
     return isComplete(root) > -2;
   }
   
-	private int isComplete(Node nd) { // Dovrebbe andare
+	/*private int isComplete(Node nd) { // Dovrebbe andare // NO non va
 		if (nd.left == null && nd.right == null)
 			return 0;
 		else if (nd.left != null && nd.right != null) {
@@ -280,6 +280,15 @@ public BinaryTree trimmed(int h) {
 				return -2;
 		} else
 			return -2;
+	}*/
+	
+	private int isComplete(Node nd){
+		if(nd == null)
+			return -1;
+		int h = isComplete(nd.left);
+		if(isComplete(nd.right) == h)
+			return h + 1;
+		else return -2;
 	}
   
   public int numNodiLiv(int liv) {

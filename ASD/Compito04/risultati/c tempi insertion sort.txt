@@ -1,0 +1,22 @@
+insertion sort 
+
+size =   5000: tempo = ms      5.18; su quasi ord.: tempo = ms  0.01
+size =  10000: tempo = ms     21.04; su quasi ord.: tempo = ms  0.02
+size =  15000: tempo = ms     53.41; su quasi ord.: tempo = ms  0.03
+size =  20000: tempo = ms     96.45; su quasi ord.: tempo = ms  0.04
+size =  25000: tempo = ms    136.55; su quasi ord.: tempo = ms  0.04
+size =  30000: tempo = ms    207.68; su quasi ord.: tempo = ms  0.30
+size =  35000: tempo = ms    262.45; su quasi ord.: tempo = ms  0.07
+size =  40000: tempo = ms    340.74; su quasi ord.: tempo = ms  0.07
+size =  45000: tempo = ms    435.12; su quasi ord.: tempo = ms  0.08
+size =  50000: tempo = ms    532.81; su quasi ord.: tempo = ms  0.12
+size =  55000: tempo = ms    649.63; su quasi ord.: tempo = ms  0.10
+size =  60000: tempo = ms    770.23; su quasi ord.: tempo = ms  0.10
+size =  65000: tempo = ms    923.37; su quasi ord.: tempo = ms  0.12
+size =  70000: tempo = ms   1043.60; su quasi ord.: tempo = ms  0.18
+size =  75000: tempo = ms   1214.38; su quasi ord.: tempo = ms  0.13
+size =  80000: tempo = ms   1377.45; su quasi ord.: tempo = ms  0.18
+size =  85000: tempo = ms   1576.25; su quasi ord.: tempo = ms  0.20
+size =  90000: tempo = ms   1743.72; su quasi ord.: tempo = ms  0.16
+size =  95000: tempo = ms   1935.97; su quasi ord.: tempo = ms  0.17
+size = 100000: tempo = ms   2177.76; su quasi ord.: tempo = ms  0.18
