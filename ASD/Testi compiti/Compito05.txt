@@ -1,0 +1,38 @@
+Si leggano e studino le slides sul mergesort e sul quicksort.
+
+Si modifichino i files sorting.c e sorting.h, creati per il Compito 4, realizzando le seguenti versioni di algoritmi di
+ordinamento:
+quicksort - versione del libro di testo;
+quicksort - una delle versioni alla Hoare;
+(facoltativo) quicksort - un'altra versione a scelta;
+quicksort - la versione alla Hoare scelta sopra, ottimizzata con insertion sort sotto un'opportuna soglia, da determinarsi
+per mezzo di prove;
+mergesort - versione-base, con insertion-sort su porzioni sotto una soglia;
+mergesort - versione senza chiamate inutili del merge (ed eventualmente con merge ottimizzato);
+mergesort - versione "a passo alternato".
+Si crei un file testFastSorting.c (o fastSortingTest.c o testOrdinamentoVeloce.c, o nome analogo), in cui si realizzi un
+testing dei vari algoritmi su array di lunghezze "grandi" crescenti, ad es. da 100000 fino a 2 milioni di elementi, sia
+non ordinati che (quasi) ordinati, raccogliendo le misure dei tempi in un file di testo.
+SI EVITINO GLI ALGORITMI E I CASI QUADRATICI.
+
+Per i quicksort si confrontino anche gli andamenti per array con pochi elementi ripetuti e con molti elementi ripetuti.
+
+Si realizzino esattamente le stesse versioni in Java nella classe Sorting. 
+
+Si realizzi in Java una classe TestFastSorting che testi gli algoritmi veloci suddetti.
+
+Si esaminino e si confrontino fra di loro, e con le previsioni teoriche, i risultati ottenuti in C; si esaminino poi i
+risultati ottenuti in Java, confrontandoli con quelli in C. Si scriva una breve relazione corredata di tabelle, simile a
+quella presentata per il Compito 4.
+
+Si prenda la versione più veloce degli algoritmi di ordinamento quadratici realizzati nel Compito 4 e, a partire dalla
+tabella dei tempi trovati per il Compito 4, si calcoli il tempo approssimativamente necessario al suddetto algoritmo per
+ordinare un array di 2 milioni di elementi. Durante un intervallo di riposo nel corso della giornata, si verifichi tale
+tempo (che può essere di diversi minuti).
+Si provi anche, separatamente, una versione "sottilmente errata" del quicksort, e se ne descriva brevemente il comportamento.
+
+Qui sotto trovate un esempio Java di TestFastSorting dello scorso anno, per un insieme di algoritmi di ordinamento
+lievemente diverso da quello di quest'anno. Non potete quindi usarlo tale e quale, ma potete prenderlo come base da
+adattare al compito di quest'anno, da migliorare e modificare come ritenete opportuno.
+
+CONSEGNA: si consegni la relazione (in pdf) insieme al codice.

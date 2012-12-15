@@ -5,6 +5,8 @@
 	<classpathentry kind="src" path="Compito02"/>
 	<classpathentry kind="src" path="Compito03"/>
 	<classpathentry kind="src" path="Compito04"/>
+	<classpathentry kind="src" path="Compito05"/>
+	<classpathentry kind="src" path="Compito06"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

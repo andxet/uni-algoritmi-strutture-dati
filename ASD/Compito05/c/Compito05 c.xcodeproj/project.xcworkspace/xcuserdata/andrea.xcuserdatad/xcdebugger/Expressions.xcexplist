@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "testSort:sortingTest.c">
+      </ContextState>
+      <ContextState
+         contextName = "saveToFile:sortingTest.c">
+      </ContextState>
+      <ContextState
+         contextName = "mergePA:sorting.c">
+         <PersistentStrings>
+            <PersistentString
+               value = "a[i]">
+            </PersistentString>
+            <PersistentString
+               value = "a[j]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

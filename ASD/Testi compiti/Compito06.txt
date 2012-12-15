@@ -1,0 +1,14 @@
+Si definisca, in un linguaggio di programmazione a propria scelta, un tipo astratto "coda con priorità" (a minimo) di
+elementi di tipo stringa con priorità
+di tipo double, oppure - se si si sono capiti i tipi generici in Java o in C - un tipo astratto "coda con priorità" con
+elementi di tipo generico E e priorità di tipo double, oppure - se si preferisce - di priorità di un tipo generico P col
+vincolo che (in Java) implementi "Comparable di P".
+
+Fra le operazioni del tipo astratto deve esserci anche l'aumento (cioè, nella coda a minimo, la diminuzione!) della priorità.
+
+Si realizzi poi, ovviamente nello stesso linguaggio scelto per il tipo astratto, una implementazione del suddetto tipo astratto
+tramite Heap.
+Se il linguaggio è Java, si mettano le classi all'interno di un package "collezioni".
+
+Si realizzi infine una classe di test che provi la coda. Se il linguaggio è Java, si metta tale classe all'interno di un
+package testCollezioni.
