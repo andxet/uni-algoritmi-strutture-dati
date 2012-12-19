@@ -1,9 +1,11 @@
 package peretti.collezioni;
 
-public interface CodaConPriorita {//a minimo: 1 priorità massima, > 1 priorità minore in base al valore
+public interface CodaConPriorita<E, K extends Comparable<?>> {
+	//a minimo: 1 priorità massima, > 1 priorità minore in base al valore
 	boolean vuota();
-	void inserisci(Object o, int p);
-	Object primo();
-	Object estraiPrimo();
-	void cambiaPriorità(Object o, int p);
+	void inserisci(E o, K p);
+	E primo();
+	E estraiPrimo();
+	//void cambiaPriorita(int i, K p);
+	void cambiaPrioritaOggetto(E o, K p);
 }
