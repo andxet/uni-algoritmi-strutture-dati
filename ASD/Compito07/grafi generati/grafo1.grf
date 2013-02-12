@@ -1,0 +1,21 @@
+graph Grafo {
+"Reggio Calabria" -- "Napoli";
+"Palermo" -- "Messina";
+"Genova" -- "Milano";
+"Bardonecchia" -- "Torino";
+"Varese" -- "Milano";
+"Brescia" -- "Milano";
+"Savona" -- "Torino";
+"Belluno" -- "Venezia";
+"Trieste" -- "Venezia";
+"M.Bianco" -- "Aosta";
+"Torino" -- "Milano";
+"Venezia" -- "Brescia";
+"Napoli" -- "Milano";
+"Gravellona T." -- "Genova";
+"Teramo" -- "Roma";
+"Aosta" -- "Torino";
+"Ventimiglia" -- "Genova";
+"Roma" -- "Genova";
+"Canosa" -- "Napoli";
+}
