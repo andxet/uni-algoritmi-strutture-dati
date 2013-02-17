@@ -1,0 +1,41 @@
+Si realizzano una interfaccia GrafoNonOrientato che definisca il tipo
+della struttura dati mutabile "grafo non orientato con nodi identificati univocamente da stringhe. 
+L'interfaccia dovra specificare almeno le seguenti operazioni:
+
+- Una operazione che restituisca il numero dei nodi.
+
+- Una operazione toString() che restituisca una stringa che rappresenta il grafo nel formato dot usato dal tool graphviz
+(vedi file di istruzioni).
+
+- Una operazione che aggiunga un nuovo nodo:
+void aggiungiNodo(String nome)
+
+
+- Una operazione che aggiunga un arco al grafo:
+void aggiungiArco(String nodo1, String nodo2, double peso, String nomeArco)
+
+
+- Una operazione che, dato un nodo di partenza s, costruisca l'albero dei cammini minimi da s, e ne restituisca il formato dot.
+
+- Una operazione che, dato un nodo di partenza e un nodo di arrivo, visualizzi una descrizione del (o di un) cammino minimo dal
+nodo di partenza a quello di arrivo.
+
+- Una operazione che dato un nodo restituisca il minimo albero ricoprente usando l'algoritmo di Prim (scegliete come rappresentarlo).
+
+- Una operazione che restituisca il minimo albero ricoprente usando l'algoritmo di Kruskal (scegliete come trappresentarlo).
+
+Si definiscano le classi GrafoNonOrientatoListeDiAdiacenza,
+FabbricaGrafoNonOrientato,
+TestGrafoNonOrientato.
+
+La classe GrafoNonOrientatoListeDiAdiacenza deve essere realizzata rappresentando i nodi come indici dell'array delle liste di
+adiacenza, e deve contenere un costruttore
+GrafoNonOrientatoListeDiAdiacenza(int capacity), dove capacity è il massimo numero di nodi che il grafo può contenere senza bisogno
+di riallocazioni.
+
+Il codice della classe TestGrafoNonOrientato non dovra' fare riferimento alla classe GrafoNonOrientatoListeDiAdiacenza, ma solo
+alla
+classe FabbricaGrafoNonOrientato.
+
+Se si vuole, si puo' realizzare la classe TestGrafoNonOrientato come un piccolo applicativo che permette di creare grafi, salvarli
+in formato .dot su file, caricarli in memoria leggendo un file in formato .dot, etc.

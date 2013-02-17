@@ -1,18 +1,18 @@
 package peretti.testGrafi;
 
-import java.util.HashMap;
-
-import javax.swing.text.html.MinimalHTMLWriter;
-
 import peretti.grafi.*;
+import static peretti.grafi.FabbricaGrafoNonOrientato.*;
 
 public class TestGrafoNonOrientato {
+	//Il programma salva la descrizione dei grafi in formato dot nella cartella grafigenerati.
+	//Nella cartella grafigenerati, lo script bash genera per ogni file di estensione grf, tramite il comando dot, la rappresentazione dei grafi.
 	
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		GrafoNonOrientatoListeDiAdiacenza grafo = FabbricaGrafoNonOrientato.grafoAutostradeItaliane();
+		FabbricaGrafoNonOrientato grafo = new FabbricaGrafoNonOrientato();/*
+		grafo.setGrafoAutostradeItaliane();
 		s(grafo.toString());
 		s(grafo.path("Milano", "Bardonecchia"));
 		s(grafo.path("Bardonecchia","Milano"));
@@ -23,20 +23,35 @@ public class TestGrafoNonOrientato {
 		}
 		s(grafo.path("Bardonecchia", "Teramo"));
 		
-		s("Albero cammini minimi Torino: " + grafo.minPath("Milano"));
-		s("Albero cammini minimi Torino: " + grafo.minPath("Torino"));
-		s("Albero cammini minimi Trieste: " + grafo.minPath("Trieste"));
-		s("Albero cammini minimi ggg: " + grafo.minPath("ggg"));
+		s("Albero cammini minimi Torino: " + camminiMinimi(grafo, "Milano"));
+		s("Albero cammini minimi Torino: " + camminiMinimi(grafo, "Torino"));
+		s("Albero cammini minimi Trieste: " + camminiMinimi(grafo, "Trieste"));
+		s("Albero cammini minimi ggg: " + camminiMinimi(grafo, "ggg"));
 		
-		String s = FabbricaGrafoNonOrientato.AlberoRicoprentePrim(grafo, "Milano");
+		String s = alberoRicoprentePrim(grafo, "Milano");
 		s(s);
-		FabbricaGrafoNonOrientato.salvaSuFile(s);
-		s = FabbricaGrafoNonOrientato.AlberoRicoprentePrim(grafo, "Bardonecchia");
+		salvaSuFile("prim from milano", s);
+		s = alberoRicoprentePrim(grafo, "Bardonecchia");
 		s(s);
-		FabbricaGrafoNonOrientato.salvaSuFile(s);
-		s = FabbricaGrafoNonOrientato.AlberoRicoprentePrim(grafo, "Bardonecchia");
+		salvaSuFile("prim from bardonecchia", s);
+		s = alberoRicoprentePrim(grafo, "Bardonecchia");
 		s(s);
-		FabbricaGrafoNonOrientato.salvaSuFile("ggg");
+		s = alberoRicoprenteKruskal(grafo);
+		salvaSuFile("kruskal", s);
+		
+		///////////*/
+		grafo.setGrafoSecondo();
+		salvaSuFile("Grafo secondo", grafo.toString());
+		s(grafo.percorso("A", "L"));
+		s(grafo.percorso("A", "H"));
+		s(grafo.percorso("A", "Z"));
+		salvaSuFile("Grafo secondo cammini minimi A", grafo.camminiMinimi("A"));
+		salvaSuFile("Grafo secondo cammini minimi L", grafo.camminiMinimi("L"));
+		salvaSuFile("Grafo secondo cammini minimi G", grafo.camminiMinimi("G"));
+		salvaSuFile("Grafo secondo prim A", grafo.alberoRicoprentePrim("A"));
+		salvaSuFile("Grafo secondo prim L", grafo.alberoRicoprentePrim("L"));
+		salvaSuFile("Grafo secondo prim G", grafo.alberoRicoprentePrim("G"));
+		salvaSuFile("Grafo secondo kruskal", grafo.alberoRicoprenteKruskal());		
 	}
 	
 	public static void s(String s){

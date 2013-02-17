@@ -6,7 +6,7 @@ public interface GrafoNonOrientato {
 
 	int nNodi();
 
-	String toString();// che restituisca una stringa che rappresenta il grafo nel formato dot usato dal tool graphviz (vedi file di istruzioni).
+	@Override String toString();// che restituisca una stringa che rappresenta il grafo nel formato dot usato dal tool graphviz (vedi file di istruzioni).
 
 	//- Una operazione che aggiunga un nuovo nodo:
 	void aggiungiNodo(String nome);
@@ -26,5 +26,5 @@ public interface GrafoNonOrientato {
 	String alberoRicoprentePrim(String root);
 	
 	//- Una operazione che restituisca il minimo albero ricoprente usando l'algoritmo di Kruskal (scegliete come rappresentarlo).
-	GrafoNonOrientatoListeDiAdiacenza alberoRicoprenteKruskal(String root);//Restituisco un grafo, anche se non è la struttura dati migliore per la memorizzazione di un albero, posso utili
+	String alberoRicoprenteKruskal();//Restituisco un grafo, anche se non è la struttura dati migliore per la memorizzazione di un albero, posso utili
 }

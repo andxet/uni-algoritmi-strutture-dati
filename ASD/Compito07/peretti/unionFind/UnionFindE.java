@@ -74,38 +74,4 @@ public class UnionFindE<E extends Comparable<E>> {
 			return node.parent;
 		}
 	}
-
-	/*
-	public UnionFindE() {
-		parentOrNSize = new Hashtable<E, E>(); 
-	}//UnionFindE
-
-	public E find(E j) {
-		if (parentOrNSize.get(j) == null)//Se è uguale a null allora è la radice
-			return j; // radice
-		else {//Altrimenti effettuo la compressione
-			E temp = find(parentOrNSize.get(j));
-			parentOrNSize.put(j, temp);
-			return temp;
-		}
-	}//find
-
-	public int capacity() {
-		return parentOrNSize.size();
-	}//capacity
-
-	public boolean union(E u1, E u2) {//kruskalUnion nelle slide
-		E root1 = find(u1);
-		E root2 = find(u2);
-		if (root1.compareTo(root2) == 0)
-			return false;
-		if (parentOrNSize.get(root2).compareTo(parentOrNSize.get(root1)) < 0) {
-			parentOrNSize.put(root1, parentOrNSize.get(root2) + parentOrNSize.get(root1));
-			parentOrNSize.get(root2) = root1;
-		} else {
-			parentOrNSize.get(root2) += parentOrNSize.get(root1);
-			parentOrNSize.get(root1) = root2;
-		}
-		return true;
-	}//union*/
 }

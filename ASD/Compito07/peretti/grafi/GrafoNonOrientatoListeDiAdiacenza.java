@@ -35,8 +35,7 @@ public class GrafoNonOrientatoListeDiAdiacenza implements GrafoNonOrientato{
 			pesi.add(peso);
 			nomi.add(nomeArco);
 		}
-	}
-	///Fine classe interna Nodo
+	}//Fine classe interna Nodo
 
 	HashMap<String, Nodo> nodi;
 	String nome;
@@ -166,8 +165,7 @@ public class GrafoNonOrientatoListeDiAdiacenza implements GrafoNonOrientato{
 		return cammino;
 	}//path
 
-	@Override
-	public GrafoNonOrientatoListeDiAdiacenza alberoRicoprenteKruskal(String root) {
+	public GrafoNonOrientatoListeDiAdiacenza kruskal() {//Restituisce un grafo non orientato, in realtà quel grafo è un albero.
 
 		class Arco{
 			String da, a, nome;
@@ -202,26 +200,30 @@ public class GrafoNonOrientatoListeDiAdiacenza implements GrafoNonOrientato{
 			forestaMAR.makeSet(nodo.element);
 		}
 
-		int count = 0, n = nodi.size();
-		while(count < n){
+		while(!PQ.vuota()){
 			Arco arco = PQ.estraiPrimo();
 			if(forestaMAR.kruskalUnion(arco.da, arco.a)){
 				alberoRicoprente.aggiungiArco(arco.da, arco.a, arco.peso, arco.nome);
-				count++;
 			}
 		}
 		return alberoRicoprente;
-	}//alberoRicoprenteKruskal
+	}//kruskal
+	
+	@Override public String alberoRicoprenteKruskal(){
+		return kruskal().toString();
+	} 
 
 	@Override
 	public String minPath(String s) {
-		if(!nodi.containsKey(s))//controllo se esistono entrambi i nodi
+		if(!nodi.containsKey(s))//controllo se esiste il nodo
 			return "Nodo inesistente";
 
 		if(!dijApplicabile)
 			return "Algoritmo non applicabile, esistono archi con peso negativo";
 
 		HashMap<String, String> camminiMinimi = dijkstra(s);
+		return this.ArrayToDot(camminiMinimi);
+		/*//Questa parte di codice produce una stringa nel formato --->nodo--->nodo ecc.
 		Iterator<String> nodi = camminiMinimi.keySet().iterator();
 		String cammino = "", temp;
 
@@ -237,24 +239,12 @@ public class GrafoNonOrientatoListeDiAdiacenza implements GrafoNonOrientato{
 				cammino = cammino.concat("\n");
 		}
 
-		return cammino;
+		return cammino;*/
 	}//minPath
 
 	@Override
 	public String alberoRicoprentePrim(String root) {//Restituisco il formato dot dell'albero
-		HashMap<String, String> albero = prim(root);
-		if(albero == null)
-			return null;
-		String nodo, s = "graph " + nome + " {\n";
-		Iterator<String> keys = albero.keySet().iterator();
-		while(keys.hasNext()){
-			nodo = keys.next();
-			if(albero.get(nodo) == null || nodo.equals(albero.get(nodo)))
-				continue;
-			s = s.concat("\"" + nodo + "\" -- \"" + albero.get(nodo) + "\";\n");
-		}
-		s = s.concat("}");
-		return s;
+		return this.ArrayToDot(prim(root));
 	}//alberoRicoprentePrim
 
 	public HashMap<String, String> prim(String root) {
@@ -314,6 +304,21 @@ public class GrafoNonOrientatoListeDiAdiacenza implements GrafoNonOrientato{
 		s = s.concat("}");
 		return s;
 	}//toString
+	
+	private String ArrayToDot(HashMap<String, String> albero){
+		if(albero == null)
+			return null;
+		String nodo, s = "graph " + nome + " {\n";
+		Iterator<String> keys = albero.keySet().iterator();
+		while(keys.hasNext()){
+			nodo = keys.next();
+			if(albero.get(nodo) == null || nodo.equals(albero.get(nodo)))
+				continue;
+			s = s.concat("\"" + nodo + "\" -- \"" + albero.get(nodo) + "\";\n");
+		}
+		s = s.concat("}");
+		return s;
+	}
 
 	public String getNome(){
 		return this.nome;
