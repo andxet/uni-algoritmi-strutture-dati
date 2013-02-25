@@ -8,8 +8,8 @@
 #define true 1
 #define false 0
 
-#define SOGLIA_QSORT 77
-#define SOGLIA_MSORT 48
+#define SOGLIA_QSORT 69
+#define SOGLIA_MSORT 64
 
 int * vcopy(int v[], int n){
 	int i = 0;
@@ -91,7 +91,8 @@ void isort2(int a[], int inf, int sup){
 }
 
 void isort3(int a[], int fst, int lst) {
-    for (int i = fst + 1; i <= lst; i++) {
+    int i;
+    for (i = fst + 1; i <= lst; i++) {
         int x = a[i];
         int j = i;
         

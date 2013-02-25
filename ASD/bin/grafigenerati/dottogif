@@ -1,0 +1,5 @@
+#!/bin/bash
+for filedot in *.grf; do
+	dot -Tgif "$filedot" > "`basename "$filedot" .grf`.gif";
+	echo "$filedot [PROCESSATO]";
+done

@@ -4,13 +4,15 @@ import java.util.Random;
 
 public class Sorting2 {
 
-	final static int SOGLIA_QSORT = 77;
-	final static int SOGLIA_MSORT  = 50;
+	static Random rand = new Random();
+	
+	final static int SOGLIA_QSORT = 69;
+	final static int SOGLIA_MSORT  = 64;
 
 
 	/** SELECTION SORT */
 
-	 public void ssort(int a[], int n) {
+	 public static void ssort(int a[], int n) {
 		  int i = 0, j, min;
 		  while (i < n) {
 			  min = i;
@@ -23,7 +25,7 @@ public class Sorting2 {
 		  }
 	  }
 
-	  public void ssortMax(int a[], int n) {
+	  public static void ssortMax(int a[], int n) {
 		  int i = n, j, max;
 		  while (i > 0){
 			  max = i;
@@ -47,7 +49,7 @@ public class Sorting2 {
 	  inserisce l'intero a[i] al posto giusto in v[0..i]
 	*/
 
-	  private void inserisci(int v[], int i) {
+	  private static void inserisci(int v[], int i) {
 		  int temp = v[i], j = i;
 		  while(j > 0 && v[j - 1] > temp){
 			  v[j] = v[j-1];
@@ -56,7 +58,7 @@ public class Sorting2 {
 		  v[j] = temp;
 	  }
 
-	  public void isort(int a[], int n) {
+	  public static void isort(int a[], int n) {
 		  //printf("isort");
 		  int i;
 		  for(i = 0; i < n; i++)
@@ -151,7 +153,7 @@ public class Sorting2 {
 	/////////////
 	private static void msortB(int a[], int first, int last, int aux[], int soglia){
 	    if(last - first < soglia){
-	        isort3(a, first, last);
+	        isort2(a, first, last);
 	        return;
 	    }
 	    
@@ -224,7 +226,6 @@ public class Sorting2 {
 	/////////////
 	private static void qsortASD(int a[], int inf, int sup){
 		if(inf < sup){
-			Random rand = new Random();
 			int iPivot = inf + rand.nextInt(sup - inf);
 			scambia(a, sup, iPivot);
 			int x = a[sup];
@@ -249,7 +250,6 @@ public class Sorting2 {
 	//Quicksort Hoare
 	private static void qsortHoare(int a[], int inf, int sup) {
 		if(inf < sup) {
-			Random rand = new Random();
 			int iPivot = inf + rand.nextInt(sup - inf);
 			int x = a[iPivot];
 			int i = inf;
@@ -307,7 +307,32 @@ public class Sorting2 {
 	    qsortOttimizzato(a, 0, l - 1, SOGLIA_QSORT);
 	}
 
-
+	public static void qsortSErrato(int a[], int inf, int sup) {
+		if (inf < sup) {
+			int iPivot = inf; //Per dimostrare che può non funzionare, si assume che l'algoritmo scelga l'elemento all'inizio della porzione di array
+			int x = a[iPivot];
+			int i = inf;
+			int j = sup;
+			while (true) {
+				while (a[i] < x)
+					i++;
+				while (a[j] > x)
+					j--;
+				if (i <= j) {
+					scambia(a, i, j);
+					i++;
+					j--;
+				} else
+					break;
+			}
+			qsortSErrato(a, inf, j);
+			qsortSErrato(a, i, sup);
+		}
+	}
+	
+	public static void quickSortSottilmenteErrato(int a[], int l){
+		qsortSErrato(a, 0, l - 1);
+	}
 
 	public static void quicksortOttimizzatoTestSoglia(int a[], int l, int soglia){
 	    qsortOttimizzato(a, 0, l - 1, soglia);

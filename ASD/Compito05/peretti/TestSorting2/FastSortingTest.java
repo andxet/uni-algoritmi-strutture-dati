@@ -17,8 +17,10 @@ public class FastSortingTest {
 		Sorting2.loadclass();
 	    try{
 	    	//testSoglia(); //Test per calcolare la soglia
-	    	testAlgoritmi();//Test per calcolare il tempo di esecuzione degli algoritmi
-	    	testQsort();//Test per il qsort, con molti o pochi elementi ripetuti
+	    	//testAlgoritmi();//Test per calcolare il tempo di esecuzione degli algoritmi
+	    	//testQsort();//Test per il qsort, con molti o pochi elementi ripetuti
+	    	//testIsort2mil();
+	    	testQuicksortErrato();
 	    }catch (Exception e){
 	    	e.printStackTrace();
 	    }
@@ -127,9 +129,9 @@ public class FastSortingTest {
 	        //case QUICKSORTF:
 			//case ISORT:
 			case QUICKSORTH:
-	        //case QUICKSORTO:
+	        case QUICKSORTO:
 	        case MERGESORTO:
-	        //case MERGESORTB:
+	        case MERGESORTB:
 	        case MERGESORTPA:
 				return true;
 		default:
@@ -157,10 +159,7 @@ public class FastSortingTest {
 	}
 
 	public static void testSort(int alg, String tipoTest) throws IOException{
-		if(!TEST_NONORDINATO && !TEST_ORDINATO)
-			return;
-	    
-	    if(TEST_NONORDINATO){
+		if(TEST_NONORDINATO){
 	        
 	        String nomefile;
 	        nomefile = new String("Tempi " + algoritmi[alg] + " " + tipoTest + " non ordinato.txt");
@@ -217,8 +216,8 @@ public class FastSortingTest {
 	    System.out.printf("Tempo quicksortHoare: ms %5.2f\n", timediff);
 	    out.printf("Quicksort: %5.2f\n", timediff);
 	    
-	    for(i = 0; i < 2000; i++){
-	        originale.clone();
+	    for(i = 0; i < 300; i++){
+	        vett = originale.clone();
 	        
 	        before = System.nanoTime();
 	        Sorting2.quicksortOttimizzatoTestSoglia(vett, ELEM_TEST_SOGLIA, i);
@@ -254,8 +253,8 @@ public class FastSortingTest {
 	    System.out.printf("Tempo mergesort: ms %5.2f\n", timediff);
 	    out.printf("Mergesort: %5.2f\n", timediff);
 	    
-	    for(i = 0; i < 2000; i++){
-	        originale.clone();
+	    for(i = 0; i < 300; i++){
+	        vett = originale.clone();
 	        
 	        before = System.nanoTime();
 	        Sorting2.mergesortBTestSoglia(vett, ELEM_TEST_SOGLIA, i);
@@ -303,6 +302,54 @@ public class FastSortingTest {
 	}
 
 
+	public static void testIsort2mil(){
+		System.out.println("\nTest insertionsort su 2 milioni di elementi");
+		int vett[] = new int[200000];
+		fillArray(vett, vett.length, 9 * vett.length / 10);
+	    
+	    double before, after;
+	    
+	    before = System.nanoTime();
+	    Sorting2.isort(vett, vett.length);
+        after = System.nanoTime();
+        
+        if(!sorted(vett, vett.length))
+        	System.out.println("NON ORDINATO!!!");
+        before /= 1000000;
+        after /= 1000000;
+	    
+	    timediff = after - before;
+	    System.out.printf("Tempo insertionsort su 2.000.000 di elementi: ms %5.2f\n", timediff);
+	    
+	}
+	
+	public static void testQuicksortErrato(){
+		System.out.println("Questa esecuzione solleverà un'eccezione.");
+		int arr[] = {8, 9, 10};
+		System.out.println("L'array contiene:");
+		for(int i = 0; i < arr.length; i++)
+			System.out.println("[" + i + "] " + arr[i]);
+		try{
+			Sorting2.quickSortSottilmenteErrato(arr, arr.length);
+		}catch (IndexOutOfBoundsException e){
+			e.printStackTrace();
+			System.out.println("ECCEZIONE!");
+		}
+		
+		System.out.println("Mentre questa esecuzione no:");
+		int arr2[] = {45, 23, 1, 5};
+		System.out.println("L'array contiene:");
+		for(int i = 0; i < arr2.length; i++)
+			System.out.println("[" + i + "] " + arr2[i]);
+		try{
+			Sorting2.quickSortSottilmenteErrato(arr2, arr2.length);
+		}catch (IndexOutOfBoundsException e){
+			e.printStackTrace();
+			System.out.println("ECCEZIONE!");
+		}
+		System.out.println("Fine test!");
+	}
+	
 	public static void s(String str){
 		System.out.println(str);
 	}

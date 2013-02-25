@@ -205,7 +205,6 @@ void testSoglia(){
     int * vett;
     FILE * file;
     
-    /*
     file = fopen("test soglia quicksort.txt", "w");
     vett = vcopy(originale, ELEM_TEST_SOGLIA);
     printf("INIZIO TEST SOGLIA\n%d elementi", ELEM_TEST_SOGLIA);
@@ -227,7 +226,6 @@ void testSoglia(){
         printf("%s\n\n", sorted(vett, ELEM_TEST_SOGLIA) ? "ordinato" : "NON ORDINATO!!!!!!");
     }
     fclose(file);
-    */
     
     file = fopen("test soglia mergesort.txt", "w");
     vett = vcopy(originale, ELEM_TEST_SOGLIA);
